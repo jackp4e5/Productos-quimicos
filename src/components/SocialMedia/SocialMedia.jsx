@@ -6,9 +6,12 @@ import instagram from "../../../public/instagram.png";
 const SocialMedia = ({ title }) => {
   const telefono = "573144115161";
 
+
   const mensajeOriginal = `¡Hola! Me interesa este producto ${title}`;
 
-  const mensajeCodificado = encodeURIComponent(mensajeOriginal);
+  const message = '¡Hola! Me interesa pedir información sobre sus productos'
+
+  const mensajeCodificado = title ? encodeURIComponent(mensajeOriginal) : encodeURIComponent(message);
 
   const urlWhatsapp = `https://wa.me/${telefono}?text=${mensajeCodificado}`;
 

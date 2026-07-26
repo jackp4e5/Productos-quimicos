@@ -24,11 +24,9 @@ export const InfiniteScroll = () => {
   }, []);
 
   const slider = (position) => {
-    // se obtiene el primer elemento del slider
     const firstElement = slideShow.current.children[0];
-    // se cambia la transicion del elemento
 
-    const sizeSlide = slideShow.current.children[0].offsetWidth;
+    const sizeSlide = firstElement.offsetWidth;
 
     const transition = () => {
       slideShow.current.style.transition = `none`;
@@ -39,7 +37,6 @@ export const InfiniteScroll = () => {
 
     if (position === "siguiente") {
       if (slideShow.current.children.length > 0) {
-        // se mueve el elemento de posicion
         slideShow.current.style.transition = `500ms ease-out transform`;
         slideShow.current.style.transform = `translateX(-${sizeSlide}px)`;
 

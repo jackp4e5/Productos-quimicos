@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./Contactform.css";
+import SocialMedia from "../SocialMedia/SocialMedia";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -24,6 +24,11 @@ export default function ContactForm() {
         <p className="section-subtitle">
           Pónte en contacto con nuestros especialistas en productos químicos.
         </p>
+
+        <div className="wrapperMedia">
+          <p>Nuestros canales de atención</p>
+          <SocialMedia />
+        </div>
 
         <div className="form-container">
           {submitted ? (

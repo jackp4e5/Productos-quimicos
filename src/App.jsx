@@ -9,14 +9,15 @@ import { mockProducts } from "./data/mockProducts";
 import ModalCard from "./components/ModalCard/ModalCard";
 import { GlobalContext } from "./context/GlobalContext";
 import Footer from "./components/Footer/Footer";
-import SocialMedia from "./components/SocialMedia/SocialMedia";
 
 export default function App() {
   const { cardInfo, setCardInfo, isModalActive, setIsActive } =
     useContext(GlobalContext);
 
   useEffect(() => {
-    isModalActive ? document.body.style.overflow = 'hidden' :document.body.style.overflow = 'auto';
+    isModalActive
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "auto");
   }, [isModalActive]);
 
   return (
@@ -65,15 +66,9 @@ export default function App() {
           </section>
 
           <ContactForm />
-
-          <div className="wrapperMedia">
-
-          <SocialMedia/>
-          </div>
-
         </main>
 
-        <Footer/>
+        <Footer />
       </div>
     </>
   );
