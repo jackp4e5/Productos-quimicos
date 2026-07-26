@@ -1,0 +1,17 @@
+
+
+
+
+.socialMedia img {
+  margin-top: 10px;
+  width: 40px;
+}
+
+.socialMedia img:hover {
+  scale: 1.2;
+}
+
+.wrapperSocialMedia {
+  display: flex;
+  gap: 20px;
+}

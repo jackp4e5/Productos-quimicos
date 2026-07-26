@@ -1,0 +1,88 @@
+.modal {
+  overflow: auto;
+  height: 100vh;
+  width: 100%;
+  background: rgba(87, 158, 205, 0.9);
+  position: absolute;
+  top: 0;
+  z-index: 2000;
+  color: white;
+  padding: 20px;
+  display: grid;
+  place-items: center;
+  user-select: none;
+}
+
+.card {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100%;
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.wrapperImage {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.wrapperImage span {
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute;
+  background: rgba(1, 1, 1, 0.977);
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  text-align: center;
+}
+
+.heading {
+  font-size: 25px;
+  text-align: center;
+}
+.socialHeading {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  border-bottom: 1px white solid;
+  transition: 0.1s ease-in-out border-bottom;
+}
+
+.socialHeading:hover {
+  border-bottom: 2px orange solid;
+}
+
+.button {
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(87, 158, 205, 0.9);
+  color: white;
+  margin-top: 30px;
+  font-size: 20px;
+  transition: 0.2s ease-in background;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: rgba(23, 53, 108, 0.9);
+}

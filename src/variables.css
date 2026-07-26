@@ -1,0 +1,20 @@
+:root {
+  /* Paleta Corporativa Química/Industrial */
+  --primary-color: #003366; /* Azul marino profundo */
+  --primary-hover: #002244;
+  --secondary-color: #008080; /* Verde azulado/Teal */
+  --accent-color: #e65100; /* Naranja industrial para CTA */
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+  --border-color: #e5e7eb;
+
+  /* Tipografía y Espaciado */
+  --font-main:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --container-max-width: 1200px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --transition-fast: 0.2s ease-in-out;
+}
