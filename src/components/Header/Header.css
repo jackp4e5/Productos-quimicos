@@ -51,6 +51,8 @@
   font-weight: 300;
   color: var(--primary-color);
   letter-spacing: 1px;
+  display: flex;
+  flex-flow: column;
 }
 
 .logo-bold {
@@ -113,4 +115,8 @@
   .nav-links.active {
     display: flex;
   }
+}
+
+.name{
+  font-size: 9px;
 }

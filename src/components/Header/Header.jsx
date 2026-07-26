@@ -7,12 +7,14 @@ export default function Header() {
 
   return (
     <header className="header">
-   
-
       <nav className="main-nav">
         <div className="container nav-container">
           <div className="logo">
-            <span className="logo-bold">GLOBAL</span>CHEM
+            <div>
+              {" "}
+              <span className="logo-bold">GLOBAL</span>CHEM
+            </div>{" "}
+            <span className="logo-bold name">BY JACK</span>
           </div>
 
           <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
@@ -40,14 +42,14 @@ export default function Header() {
 
           <div className="nav-actions">
             <button className="icon-btn" aria-label="Buscar">
-              <Search/>
+              <Search />
             </button>
             <button
               className="menu-toggle"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Abrir menú"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />} 
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
