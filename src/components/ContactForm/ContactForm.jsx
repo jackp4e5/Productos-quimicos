@@ -6,6 +6,7 @@ export default function ContactForm() {
     name: "",
     email: "",
     message: "",
+    
   });
   const [submitted, setSubmitted] = useState(false);
 
