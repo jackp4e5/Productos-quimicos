@@ -30,7 +30,7 @@ export default function Footer() {
       </div>
       <div className="footer-bottom">
         <div className="container">
-          <p>&copy; {new Date().getFullYear()} GlobalChem Corporation. Todos los derechos reservados. Proyecto de demostración.</p>
+          <p>&copy; {new Date().getFullYear()} GlobalChem Corporation. Todos los derechos reservados. Proyecto de demostración by Jack Pachón.</p>
         </div>
       </div>
     </footer>
