@@ -22,7 +22,7 @@ export default function Header() {
 
           <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
             <li>
-              <Link to={"/#productos"}  onClick={() => setIsMenuOpen(false)}>
+              <Link to={"/#productos"} onClick={() => setIsMenuOpen(false)}>
                 Productos
               </Link>
             </li>
