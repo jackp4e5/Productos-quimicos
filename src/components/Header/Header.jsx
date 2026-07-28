@@ -32,12 +32,12 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#sostenibilidad" onClick={() => setIsMenuOpen(false)}>
+              <a href="/#about" onClick={() => setIsMenuOpen(false)}>
                 Nosotros
               </a>
             </li>
             <li>
-              <a href="#contacto" onClick={() => setIsMenuOpen(false)}>
+              <a href="/#contacto" onClick={() => setIsMenuOpen(false)}>
                 Contacto
               </a>
             </li>

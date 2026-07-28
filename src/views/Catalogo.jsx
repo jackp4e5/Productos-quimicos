@@ -10,7 +10,7 @@ const Catalogo = () => {
       </h2>
       <div className={style.catalogGrid}>
         {catalogo.map((item) => (
-          <CatalogCard 
+          <CatalogCard key={item.id}
           item={item} />
         ))}
       </div>
