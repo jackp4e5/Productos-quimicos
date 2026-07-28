@@ -1,4 +1,4 @@
-export const mockProducts = [
+export const catalogo = [
   {
     id: 1,
     title: "Polímeros de Rendimiento Elevado",

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { Menu, Search, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,11 +11,13 @@ export default function Header() {
       <nav className="main-nav">
         <div className="container nav-container">
           <div className="logo">
-            <div>
-              {" "}
-              <span className="logo-bold">GLOBAL</span>CHEM
-            </div>{" "}
-            <span className="logo-bold name">BY JACK</span>
+            <Link className="heder-link-logo" href="/">
+              <div>
+                {" "}
+                <span className="logo-bold">GLOBAL</span>CHEM
+              </div>{" "}
+              <span className="logo-bold name">BY JACK</span>
+            </Link>
           </div>
 
           <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
@@ -24,7 +27,7 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#soluciones" onClick={() => setIsMenuOpen(false)}>
+              <a href="/catalogo" onClick={() => setIsMenuOpen(false)}>
                 Catálogo
               </a>
             </li>

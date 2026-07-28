@@ -1,75 +1,18 @@
-import { useContext, useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import ContactForm from "./components/ContactForm/ContactForm";
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import { InfiniteScroll } from "./components/InfiniteScroll/InfiniteScroll";
-import ProductCard from "./components/ProductsCard/ProductCard";
-import { mockProducts } from "./data/mockProducts";
-import ModalCard from "./components/ModalCard/ModalCard";
-import { GlobalContext } from "./context/GlobalContext";
-import Footer from "./components/Footer/Footer";
+import IndexPage from "./views/IndexPage";
+import Layout from "./layouts/Layout";
+import Catalogo from "./views/Catalogo";
 
 export default function App() {
-  const { cardInfo, setCardInfo, isModalActive, setIsActive } =
-    useContext(GlobalContext);
-
-  useEffect(() => {
-    isModalActive
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "auto");
-  }, [isModalActive]);
-
   return (
-    <>
-      {isModalActive && <ModalCard />}
-      <div className="app">
-        <Header />
-
-        <main>
-          <Hero />
-          <div className="container ">
-            <InfiniteScroll />
-          </div>
-
-          <section
-            className="container"
-            id="productos"
-            style={{ padding: "4rem 1.5rem" }}
-          >
-            <h2 className="section-title">
-              Portafolio de Productos y Materiales
-            </h2>
-            <p className="section-subtitle">
-              Explora nuestras soluciones químicas diseñadas para responder a
-              desafíos industriales complejos.
-            </p>
-
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))",
-                gap: "2rem",
-              }}
-            >
-              {mockProducts.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  id={product.id}
-                  title={product.title}
-                  category={product.category}
-                  description={product.description}
-                  image={product.image}
-                />
-              ))}
-            </div>
-          </section>
-
-          <ContactForm />
-        </main>
-
-        <Footer />
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<IndexPage />} index />
+          <Route path="/catalogo" element={<Catalogo />}  />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
