@@ -6,8 +6,20 @@ import { InfiniteScroll } from "../components/InfiniteScroll/InfiniteScroll";
 import ProductCard from "../components/ProductsCard/ProductCard";
 import { mockProducts } from "../data/mockProducts";
 import ContactForm from "../components/ContactForm/ContactForm";
+import { useLocation } from "react-router-dom";
 
 const IndexPage = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
+
   const { cardInfo, setCardInfo, isModalActive, setIsActive } =
     useContext(GlobalContext);
 
