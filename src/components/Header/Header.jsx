@@ -11,7 +11,7 @@ export default function Header() {
       <nav className="main-nav">
         <div className="container nav-container">
           <div className="logo">
-            <Link className="heder-link-logo" href="/">
+            <Link className="heder-link-logo" to={"/"}>
               <div>
                 {" "}
                 <span className="logo-bold">GLOBAL</span>CHEM
@@ -22,9 +22,9 @@ export default function Header() {
 
           <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
             <li>
-              <a href="#productos" onClick={() => setIsMenuOpen(false)}>
+              <Link to={"/#productos"}  onClick={() => setIsMenuOpen(false)}>
                 Productos
-              </a>
+              </Link>
             </li>
             <li>
               <a href="/catalogo" onClick={() => setIsMenuOpen(false)}>
