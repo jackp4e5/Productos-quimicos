@@ -3,16 +3,19 @@ import { GlobalContext } from "../../context/GlobalContext";
 
 import style from "./ModalCard.module.css";
 import SocialMedia from "../SocialMedia/SocialMedia";
+import { useLocalImages } from "../../hooks/useLocalImages";
 
 const ModalCard = () => {
   const { cardInfo, setIsModalActive } = useContext(GlobalContext);
+
+  const { images } = useLocalImages();
 
   return (
     <div className={style.modal}>
       <div className={style.card}>
         <div className={style.wrapperImage}>
           <img
-            src={cardInfo.image}
+            src={images[cardInfo.image - 1]}
             alt={cardInfo.title}
             className=""
             loading="lazy"
@@ -24,7 +27,7 @@ const ModalCard = () => {
           <p className="">{cardInfo.description}</p>
         </div>
         <div className={style.wrapper}>
-          <p className={style.socialHeading}>Conoce Más</p>
+          <p className={style.socialHeading}>Compra aquí</p>
           <SocialMedia title={cardInfo.title} />
 
           <a

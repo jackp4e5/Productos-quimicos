@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import "./ProductCard.css";
 import { mockProducts } from "../../data/mockProducts";
 import ModalCard from "../ModalCard/ModalCard";
-import { GlobalContext } from "../../context/GlobalContext";
 
 export default function ProductCard({
   title,
@@ -11,14 +10,7 @@ export default function ProductCard({
   image,
   id,
 }) {
-  const { setCardInfo, setIsModalActive, } = useContext(GlobalContext);
 
-  const handleOnclick = (id) => {
-    const element = mockProducts.filter((product) => product.id === id);
-
-    setCardInfo(element[0]);
-    setIsModalActive(true);
-  };
 
   return (
     <>
@@ -30,7 +22,7 @@ export default function ProductCard({
         <div className="card-body">
           <h3 className="card-title">{title}</h3>
           <p className="card-description">{description}</p>
-          <a href="#" className="card-link" onClick={() => handleOnclick(id)}>
+          <a href="/catalogo" className="card-link" >
             Ver especificaciones y datos →
           </a>
         </div>

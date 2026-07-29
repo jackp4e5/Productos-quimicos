@@ -20,17 +20,8 @@ const IndexPage = () => {
     }
   }, [hash]);
 
-  const { cardInfo, setCardInfo, isModalActive, setIsActive } =
-    useContext(GlobalContext);
-
-  useEffect(() => {
-    isModalActive
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "auto");
-  }, [isModalActive]);
   return (
     <>
-      {isModalActive && <ModalCard />}
       <div className="app">
         <Hero />
         <div className="container ">
