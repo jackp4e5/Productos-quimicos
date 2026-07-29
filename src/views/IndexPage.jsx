@@ -9,16 +9,23 @@ import ContactForm from "../components/ContactForm/ContactForm";
 import { useLocation } from "react-router-dom";
 
 const IndexPage = () => {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
     if (hash) {
-      const element = document.getElementById(hash.replace("#", ""));
+      let element = document.getElementById(hash.replace("#", ""));
       if (element) {
         element.scrollIntoView({ behavior: "smooth" });
+
+        setTimeout(() => {
+          window.history.replaceState(null, "", pathname);
+        }, 300);
       }
     }
   }, [hash]);
+
+  console.log(mockProducts);
+  
 
   return (
     <>
