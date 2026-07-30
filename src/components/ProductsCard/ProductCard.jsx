@@ -22,7 +22,7 @@ export default function ProductCard({
         <div className="card-body">
           <h3 className="card-title">{title}</h3>
           <p className="card-description">{description}</p>
-          <a href="/catalogo" className="card-link" >
+          <a href="/fichaTecnica" className="card-link" >
             Ver especificaciones y datos →
           </a>
         </div>

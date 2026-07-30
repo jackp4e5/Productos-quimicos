@@ -1,0 +1,63 @@
+.FichaTecnicaInfoSection {
+  padding: 20px;
+}
+
+.FichaTecnicaInfoH2 {
+  text-align: center;
+  margin: 15px 0 30px;
+  color: var(--primary-color);
+}
+.FichaTecnicaInfoH3 {
+  text-align: start;
+  color: var(--primary-color);
+  width: 100%;
+}
+
+.FichaTecnicaInfoTableWrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.FichaTecnicaInfoIndustrialApplications {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.FichaTecnicaInfoAplicaciones {
+  margin: 30px;
+}
+
+.FichaTecnicaInfoHeading{
+  margin-bottom: 30px;
+}
+.FichaTecnicaInfoAplicaciones h3 {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 25px;
+}
+
+.FichaTecnicaInfoSectorTitle {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.FichaTecnicaInfoSectorDescription {
+  margin-left: 20px;
+}
+
+.FichaTecnicaInfoVentajasWrapper{
+  margin-top: 50px;
+}
+
+.FichaTecnicaInfoVentajasTitle{
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.FichaTecnicaInfoVentajasDescription{
+  margin-left: 20px;
+}

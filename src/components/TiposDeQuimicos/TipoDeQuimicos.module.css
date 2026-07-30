@@ -1,0 +1,12 @@
+.FichaTecnicaInfoH3{
+    margin: 15px 0 5px 0;
+    color: var(--primary-color);
+}
+
+.FichaTecnicaInfoParagraph {
+    margin-left: 20px;
+}
+.FichaTecnicaInfoParagraph span{
+  color: var(--primary-color);
+  font-weight: bold;
+}
