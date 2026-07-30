@@ -5,13 +5,13 @@ const FichaTecnicaProductos = () => {
 
     
     return (
-        <main className={styles.FichaTecnicaProductosMain}>
+        <section className={styles.FichaTecnicaProductosMain}>
           {
             mockProducts.map(product => (
                <FichaTecnicaInfo key={product.id} product={product} id={product.category}/>
             ))
           }
-        </main>
+        </section>
     )
 }
 
