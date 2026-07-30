@@ -1,6 +1,6 @@
 import SocialMedia from "../SocialMedia/SocialMedia";
 import TablaEspecificaciones from "../TablaEspecificaciones/TablaEspecificaciones";
-import TipoDequimicos from "../TiposDeQuimicos/TipoDequimicos";
+import TipoDequimicos from "../TipoDeQuimicos/TipoDeQuimicos";
 import styles from "./FichaTecnicaInfo.module.css";
 
 const FichaTecnicaInfo = ({ product, id }) => {

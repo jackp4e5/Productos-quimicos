@@ -11,8 +11,9 @@ export default function ProductCard({
   id,
 }) {
 
-
   return (
+
+    
     <>
       <div className="product-card">
         <div className="card-image-wrapper">
