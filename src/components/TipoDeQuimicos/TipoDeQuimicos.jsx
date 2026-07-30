@@ -1,4 +1,4 @@
-import styles from "./TipoDequimicos.module.css"
+import styles from "./TipoDeQuimicos.module.css"
 
 const TipoDequimicos = ({tipo}) => {
  
